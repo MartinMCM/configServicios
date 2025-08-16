@@ -3,7 +3,7 @@ server:
   port: 8500
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.1.133:3309/academia?serverTimezone=UTC
+    url: jdbc:mysql://host.docker.internal:3309/academia?serverTimezone=UTC
     username: root
     password: abc123.
   jpa:
@@ -20,5 +20,5 @@ springdoc:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.1.133:8761/eureka
+      defaultZone: http://host.docker.internal:8761/eureka
     register-with-eureka: true
